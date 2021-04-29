@@ -1,4 +1,7 @@
-node_modules
-dist
-.next
-*.log
+node_modules/
+dist/
+.next/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
