@@ -6,16 +6,14 @@
   "private": true,
   "scripts": {
     "web:dev": "lerna run --stream --scope web dev",
-    "web:build": "lerna run --stream --scope web build",
     "web:start": "lerna run --stream --scope web start",
-    "web:lint": "lerna run --stream --scope web lint",
-    "prepare": "husky install",
-    "lint": "npm-run-all web:lint",
     "clean": "rimraf ./dist",
-    "build": "npm-run-all clean web:build",
+    "lint": "lerna run --stream lint",
+    "build": "lerna run --stream build",
     "format": "prettier --config ./.prettierrc.js --write \"**/*.{ts,tsx,scss}\"",
     "test": "jest -u --colors --passWithNoTests -o",
-    "test:all": "yarn test --all"
+    "test:all": "yarn test --all",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "10.2.0",
