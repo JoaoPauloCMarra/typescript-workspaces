@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2019"],
+    "module": "commonjs",
+    "target": "ES2019",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "esModuleInterop": true
+  }
+}
