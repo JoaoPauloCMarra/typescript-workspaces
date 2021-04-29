@@ -1,6 +1,0 @@
-node_modules
-.vscode
-dist
-__mocks__
-next.config.js
-jest.config.js
