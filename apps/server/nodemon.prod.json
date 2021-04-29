@@ -1,7 +1,7 @@
 {
   "ignore": ["src/*.json"],
   "watch": ["src/**/*.ts", ".env"],
-  "exec": "ts-node --project ./tsconfig.json --optimize_for_size --max_old_space_size=920 --gc_interval=100 src/index.ts",
+  "exec": "ts-node --project ./tsconfig.json ./src/index.ts",
   "env": {
     "NODE_ENV": "production"
   }
