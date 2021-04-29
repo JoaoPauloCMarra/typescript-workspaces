@@ -1,7 +1,9 @@
-node_modules/
-dist/
-.next/
+node_modules
+dist
+.next
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.env
