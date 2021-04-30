@@ -34,6 +34,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 0,
     '@typescript-eslint/no-empty-function': 0,
     '@typescript-eslint/no-unused-vars': ['error'],
+    '@typescript-eslint/ban-types': 0,
     'react/react-in-jsx-scope': 0,
     'react/prop-types': 0,
     'react/jsx-key': 0,

@@ -4,9 +4,14 @@
 
 ### Apps
 
-* Web with NextJs
+* Web with NextJs + Graphql
+* Server with Express + Graphql
+* Graphql with Typecheck
 
 ### Shared
 
-* UI Library with React
+* UI Library with React + Graphql hooks and definitions
 
+### Tests
+
+* Jest

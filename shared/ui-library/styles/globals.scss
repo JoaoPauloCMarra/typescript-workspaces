@@ -1,0 +1,74 @@
+@import './fonts';
+@import './components/button';
+@import './components/error';
+@import './components/loading';
+@import './components/users-list';
+
+html,
+body,
+body > div {
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+}
+
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(90deg, #c9d6ff 0%, #e2e2e2 100%);
+  display: block;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+.font-bold {
+  font-weight: bold;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 32px;
+}

@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const path = require('path');
+const globImporter = require('node-sass-glob-importer');
 
 const ENV_VARS = {};
 
@@ -10,8 +12,16 @@ module.exports = {
   trailingSlash: false,
   poweredByHeader: false,
   distDir: '../../dist/web',
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
   env: ENV_VARS,
+
+  sassOptions: {
+    importer: globImporter,
+  },
+
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    const tsConfig = config.module.rules[1];
+    tsConfig.include.unshift(path.join(__dirname, '../../shared'));
+    config.module.rules[1] = tsConfig;
+    return config;
+  },
 };

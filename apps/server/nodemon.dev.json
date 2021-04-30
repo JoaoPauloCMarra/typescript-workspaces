@@ -1,6 +1,6 @@
 {
   "ignore": ["src/*.json"],
-  "watch": ["src/**/*.js", ".env"],
+  "watch": ["src/**/*.ts", ".env"],
   "exec": "kill-port 5000 && ts-node --project ./tsconfig.json ./src/index.ts",
   "env": {
     "NODE_ENV": "dev"

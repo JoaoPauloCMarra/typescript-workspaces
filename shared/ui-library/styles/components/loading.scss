@@ -1,0 +1,107 @@
+.loading-wrapper {
+  min-height: 100%;
+  width: 100%;
+
+  .loading-content {
+    opacity: 0.8;
+  }
+
+  .loading-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+    div {
+      background: #480972;
+      border-radius: 50%;
+      position: absolute;
+      top: 33px;
+      width: 13px;
+      height: 13px;
+      animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    }
+    $animationSpeed: 0.4s;
+    div:nth-child(1) {
+      left: 8px;
+      animation: loading-ellipsis1 $animationSpeed infinite;
+    }
+    div:nth-child(2) {
+      left: 8px;
+      animation: loading-ellipsis2 $animationSpeed infinite;
+    }
+    div:nth-child(3) {
+      left: 32px;
+      animation: loading-ellipsis2 $animationSpeed infinite;
+    }
+    div:nth-child(4) {
+      left: 56px;
+      animation: loading-ellipsis3 $animationSpeed infinite;
+    }
+  }
+
+  .loading-spinner {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+    div {
+      box-sizing: border-box;
+      border: 8px solid #fff;
+      border-color: #fff transparent transparent transparent;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      margin: 8px;
+      width: 64px;
+      height: 64px;
+      animation: loading-spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    }
+    div:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+    div:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+    div:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+  }
+}
+
+// Ellipsis
+@keyframes loading-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loading-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes loading-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+// Spinner
+@keyframes loading-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

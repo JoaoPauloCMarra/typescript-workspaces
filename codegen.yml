@@ -1,0 +1,10 @@
+schema: './apps/server/schema.gql'
+documents: './shared/graphql-schemas/**/*'
+generates:
+  ./shared/ui-library/types/graphql.tsx:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true

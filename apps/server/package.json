@@ -2,10 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "license": "MIT",
-  "private": false,
   "scripts": {
-    "start": "nodemon -r dotenv/config --config nodemon.prod.json",
-    "dev": "nodemon -r dotenv/config --config nodemon.dev.json",
-    "lint": "eslint . --fix"
+    "start": "nodemon --ext \"ts,json\" -r dotenv/config --config ./nodemon.prod.json",
+    "dev": "nodemon --ext \"ts,json\" -r dotenv/config --config ./nodemon.dev.json",
+    "lint": "tsc --noEmit -p ./tsconfig.json && eslint ./src --fix",
+    "build": "tsc -p ./tsconfig.json"
   }
 }
